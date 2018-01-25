@@ -1,0 +1,19 @@
+<h1>Listing entries</h1>
+ 
+<table>
+  <tr>
+ 
+  <% @entries.each do |entry| %>
+    <tr>
+      <td><%= entry.body %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', entry_path(entry) %></td>
+      <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+      <td><%= link_to 'Destroy', entry_path(entry),
+              method: :delete,
+              data: { confirm: 'Are you sure?'} %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "New Entry", new_entry_path %>
