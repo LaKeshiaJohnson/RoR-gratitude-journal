@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 		@user = User.new(allowed_params)
 		if @user.save
 			session[:user_id] = @user.id #making new session when user signs up. aka signing up & logging in
-			redirect_to root_url, :notice => "Thank you for signing up."
+			redirect_to new_entry_url
 		else
 			render "new"
 		end
