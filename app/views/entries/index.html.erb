@@ -5,6 +5,7 @@
  
   <% @entries.each do |entry| %>
     <tr>
+      <td><%= entry.created_at %></td>
       <td><%= entry.body %></td>
       <td><%= link_to 'Show', entry_path(entry) %></td>
       <td><%= link_to 'Edit', edit_entry_path(entry) %></td>

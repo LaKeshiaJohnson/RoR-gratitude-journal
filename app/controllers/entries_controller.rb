@@ -1,4 +1,5 @@
 class EntriesController < ApplicationController
+
 	def index
 		@entries = Entry.all
 	end
@@ -16,7 +17,11 @@ class EntriesController < ApplicationController
 	end
 
 	def create
+		#@entry = @current_user.entries.new(params[:entry])
+
 		@entry = Entry.new(entry_params)
+		@entry.user_id = session[:user_id]
+
 		if @entry.save
 			redirect_to @entry
 		else
@@ -41,8 +46,9 @@ class EntriesController < ApplicationController
 	end
 
 	private
+
 		def entry_params
-			params.require(:entry).permit(:body)
+			params.require(:entry).permit(:body, :user_id)
 		end
 
 end
