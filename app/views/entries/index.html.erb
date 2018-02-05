@@ -1,19 +1,16 @@
-<h1>Listing entries</h1>
+<h1>All entries</h1>
  
-<table>
-  <tr>
+<table id="all-entries">
  
   <% @entries.each do |entry| %>
     <tr>
-      <td><%= entry.created_at %></td>
-      <td><%= entry.body %></td>
-      <td><%= link_to 'Show', entry_path(entry) %></td>
-      <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-      <td><%= link_to 'Destroy', entry_path(entry),
+      <td><%= entry.created_at.strftime("%b %d, %Y") %></td>
+      <td><%= entry.body.truncate(23,separator: /\s/) %></td>
+      <td><%= link_to 'View', entry_path(entry) %> | 
+      <%= link_to 'Edit', edit_entry_path(entry) %> | 
+      <%= link_to 'Delete', entry_path(entry),
               method: :delete,
               data: { confirm: 'Are you sure?'} %></td>
     </tr>
   <% end %>
 </table>
-
-<%= link_to "New Entry", new_entry_path %>
