@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
 
 	def index
-		@entries = Entry.all
+		@entries = Entry.where(:user_id => session[:user_id])
 	end
 
 	def show
