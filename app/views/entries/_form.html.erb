@@ -1,12 +1,9 @@
 <%= form_with(model: @entry, local: true)  do |form| %>
-
-  
   
     <%= form.text_area :body, class: "textarea" %>
-  
- 
  
   <p>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-warning" %>
   </p>
+  
 <% end %>
