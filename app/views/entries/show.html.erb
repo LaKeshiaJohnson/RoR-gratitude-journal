@@ -1,14 +1,16 @@
+<%= stylesheet_link_tag 'entries' %>
+
 <h1>
 	<%= @entry.created_at.strftime("%b %d, %Y") %>
 </h1>
 	<br>
+	<%= link_to 'Edit', edit_entry_path(@entry) %> |
+	<%= link_to 'Delete', entry_path(@entry),
+              method: :delete,
+              data: { confirm: 'Are you sure?'} %>
+<br>
+<div class="box">
 <p>
 	<%= @entry.body %>
 </p>
-
-
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Delete', entry_path(@entry),
-              method: :delete,
-              data: { confirm: 'Are you sure?'} %> |
-<%= link_to 'Back', entries_path %>
+</div>

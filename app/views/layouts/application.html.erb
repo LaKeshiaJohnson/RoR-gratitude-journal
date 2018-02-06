@@ -7,12 +7,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Satisfy' %>
   </head>
 
   <body>
   	<% if logged_in? %>
 
-  	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  	<nav class="navbar navbar-expand-lg navbar-light bg-warning">
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
   		</button>
@@ -33,9 +34,9 @@
 	</nav>
 
 	<% end %>
-	
   	<div class="container">
     	<%= yield %>
 	</div>
+
   </body>
 </html>

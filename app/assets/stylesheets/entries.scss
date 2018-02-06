@@ -10,6 +10,9 @@
 
 h1 {
 	padding-top: 15px;
+	padding-bottom: 10px;
+	text-align: center;
+	color: white;
 }
 
 textarea {
@@ -21,4 +24,17 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+}
+
+.box {
+	background-color: white;
+	padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
