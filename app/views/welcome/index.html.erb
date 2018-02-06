@@ -1,11 +1,13 @@
-<h1>Welcome#index</h1>
 
 
-<div id="user_header">
+<p id="logo1">Grateful</p>
+
+
+<div id="login">
 	<% if logged_in? %>
-		<%= link_to 'Logout', logout_path %>
+		
 	<% else %>
-		<%= link_to "Sign Up", signup_path%>
+		<%= link_to "Sign Up", signup_path%> |
 		<%= link_to "Log In", login_path %>
 	<% end %>
 </div>

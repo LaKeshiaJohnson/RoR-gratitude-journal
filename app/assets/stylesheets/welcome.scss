@@ -1,0 +1,40 @@
+#logo1 {
+	font-family: 'Satisfy', cursive;
+	font-size: 200px; 
+	text-align: center;
+	
+	color: white;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+html, body {
+    height:100%;
+} 
+
+body {
+  background-image: url(rays.jpg);
+  margin: 0;
+  /* min-height: 75vh; */
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ 
+  }
+
+  #login {
+  text-align: right;
+  color: white;
+  font-size: 20px;
+  }
+
+  #login a {
+  	color: white;
+  	
+  }
+
+
