@@ -16,3 +16,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 #Rails.application.config.assets.precompile += %w( welcome.css )
 
 Rails.application.config.assets.precompile += %w( entries.css )
+Rails.application.config.assets.precompile += %w( sessions.css )
+Rails.application.config.assets.precompile += %w( users.css )
