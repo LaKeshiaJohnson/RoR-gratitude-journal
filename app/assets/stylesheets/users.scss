@@ -8,3 +8,21 @@ h1 {
 	text-align: center;
 	color: white;
 }
+
+.input {
+  padding: 6px 20px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+ 
+  }
+
+  .label {
+  font-size: 20px;
+  color: white;
+  }
+
+  .field, .button {
+  text-align: center;
+  }
