@@ -10,7 +10,7 @@
               data: { confirm: 'Are you sure?'} %>
 <br>
 <div class="box">
-<p>
-	<%= @entry.body %>
-</p>
+
+	<%= simple_format(@entry.body) %>
+
 </div>
