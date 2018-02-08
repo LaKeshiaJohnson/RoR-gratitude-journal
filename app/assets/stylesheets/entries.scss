@@ -25,6 +25,7 @@ textarea {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+
 }
 
 .box {
@@ -38,4 +39,14 @@ textarea {
   align-items: center;
   justify-content: center;
 
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b7101e;
+  text-decoration: none;
 }
