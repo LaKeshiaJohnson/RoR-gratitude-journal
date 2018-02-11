@@ -2,6 +2,7 @@ class EntriesController < ApplicationController
 
 	def index
 		@entries = Entry.where(:user_id => session[:user_id])
+		@entries = Entry.paginate(:page => params[:page], :per_page => 12)
 	end
 
 	def show
